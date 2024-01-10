@@ -25,6 +25,7 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.Dungeon;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Actor;
 import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Bleeding;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Invisibility;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
@@ -130,5 +131,13 @@ public class Dagger extends MeleeWeapon {
 		Sample.INSTANCE.play( Assets.Sounds.PUFF );
 
 		wep.afterAbilityUsed(hero);
+	}
+	//Testing new melee weapon proc effects using bleed
+	@Override
+	public int proc( Char attacker, Char defender, int damage ) {
+		if(Random.Int( 9 ) == 0) {
+			Buff.affect(defender, Bleeding.class).set(Math.round(damage * 0.5f));
+		}
+		return super.proc( attacker, defender, damage );
 	}
 }

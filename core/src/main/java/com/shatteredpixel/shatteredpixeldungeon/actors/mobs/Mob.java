@@ -207,7 +207,8 @@ public abstract class Mob extends Char {
 	public CharSprite sprite() {
 		return Reflection.newInstance(spriteClass);
 	}
-	
+
+	//Movement is handled here for all mobs
 	@Override
 	protected boolean act() {
 		
@@ -228,7 +229,14 @@ public abstract class Mob extends Char {
 			spend( TICK );
 			return true;
 		}
-
+		/*
+		TODO look at this and implement stun de-buff
+		if(stunned > 0) {
+			enemySeen = false;
+			spend( TICK );
+			return true;
+		}
+		 */
 		if (buff(Terror.class) != null || buff(Dread.class) != null ){
 			state = FLEEING;
 		}
