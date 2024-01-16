@@ -22,9 +22,13 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Buff;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stun;
 import com.shatteredpixel.shatteredpixeldungeon.actors.hero.Hero;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.watabou.utils.Random;
 
 public class Gloves extends MeleeWeapon {
 
@@ -55,4 +59,12 @@ public class Gloves extends MeleeWeapon {
 		Sai.comboStrikeAbility(hero, target, 0.45f, this);
 	}
 
+	//Testing for stun proc
+	public int proc(Char attacker, Char defender, int damage ) {
+		if(Random.Int( 9 ) == 0) {
+			Buff.affect(defender, Stun.class);
+			defender.stunned = 2;
+		}
+		return super.proc( attacker, defender, damage );
+	}
 }
