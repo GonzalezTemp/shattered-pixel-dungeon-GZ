@@ -229,14 +229,14 @@ public abstract class Mob extends Char {
 			spend( TICK );
 			return true;
 		}
-		/*
-		TODO look at this and implement stun de-buff
+
+		//Ensures that the attack against a stunned enemy is a surprise attack
 		if(stunned > 0) {
 			enemySeen = false;
 			spend( TICK );
 			return true;
 		}
-		 */
+
 		if (buff(Terror.class) != null || buff(Dread.class) != null ){
 			state = FLEEING;
 		}

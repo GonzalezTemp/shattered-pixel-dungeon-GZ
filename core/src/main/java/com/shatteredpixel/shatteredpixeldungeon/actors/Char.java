@@ -65,6 +65,7 @@ import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Slow;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.SnipersMark;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Speed;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stamina;
+import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Stun;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Terror;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vertigo;
 import com.shatteredpixel.shatteredpixeldungeon.actors.buffs.Vulnerable;
@@ -136,6 +137,9 @@ public abstract class Char extends Actor {
 	
 	protected float baseSpeed	= 1;
 	protected PathFinder.Path path;
+
+	//Stun is an integer and will be determine the number of turns the char is stunned
+	public int stunned = 0;
 
 	public int paralysed	    = 0;
 	public boolean rooted		= false;
