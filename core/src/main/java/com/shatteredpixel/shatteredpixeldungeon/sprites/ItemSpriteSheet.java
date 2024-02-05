@@ -242,6 +242,7 @@ public class ItemSpriteSheet {
 	public static final int ROUND_SHIELD    = WEP_TIER3+3;
 	public static final int SAI             = WEP_TIER3+4;
 	public static final int WHIP            = WEP_TIER3+5;
+	public static final int KAMAS 			= WEP_TIER3+6;
 	static{
 		assignItemRect(SWORD,           14, 14);
 		assignItemRect(MACE,            15, 15);
@@ -249,6 +250,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ROUND_SHIELD,    16, 16);
 		assignItemRect(SAI,             16, 16);
 		assignItemRect(WHIP,            14, 14);
+		assignItemRect(KAMAS, 			15, 16);
 	}
 
 	private static final int WEP_TIER4      =                               xy(9, 8);   //8 slots
@@ -259,6 +261,7 @@ public class ItemSpriteSheet {
 	public static final int ASSASSINS_BLADE = WEP_TIER4+4;
 	public static final int CROSSBOW        = WEP_TIER4+5;
 	public static final int KATANA          = WEP_TIER4+6;
+	public static final int SCYTHE 			= WEP_TIER4+7;
 	static{
 		assignItemRect(LONGSWORD,       15, 15);
 		assignItemRect(BATTLE_AXE,      16, 16);
@@ -267,6 +270,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ASSASSINS_BLADE, 14, 15);
 		assignItemRect(CROSSBOW,        15, 15);
 		assignItemRect(KATANA,          15, 16);
+		assignItemRect(SCYTHE,			15, 16);
 	}
 
 	private static final int WEP_TIER5      =                               xy(1, 9);   //8 slots

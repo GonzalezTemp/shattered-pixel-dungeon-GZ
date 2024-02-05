@@ -9,7 +9,7 @@ import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 public class Kamas extends MeleeWeapon{
     {
         //TODO add a new sprite to the sprite sheet for kamas
-        image = ItemSpriteSheet.WAR_SCYTHE;
+        image = ItemSpriteSheet.KAMAS;
         hitSound = Assets.Sounds.HIT_SLASH;
         hitSoundPitch = 0.9f;
 
